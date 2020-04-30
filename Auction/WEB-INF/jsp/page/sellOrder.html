@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>卖家中心-订单管理</title>
+	<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../css/ladda-themeless.min.css">
+	<link rel="stylesheet" href="../../../css/style.css">
+	<link rel="stylesheet" href="../../../css/order.css">
+	
+</head>
+<body>
+
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" style="padding:0;" class="navbar-brand logo"><img src="../../../image/logo.png" alt="首页"></a>
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- 
+			<button class="btn btn-default navbar-btn navbar-left">按钮</button> -->
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+
+					<li role="presentation" class="dropdown">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="welcome_user">
+					      欢迎您，<span id="username">Skye</span> <span class="caret"></span>
+					    </a>
+					    <ul class="dropdown-menu">
+					    	<li><a class="regist" href="#">我的订单</a></li>
+					    	<li><a class="regist" href="#">个人中心</a></li>
+					    	<li><a class="regist" href="#">我的竞拍</a></li>
+					    	<li><a class="regist" href="#">我的收藏</a></li>
+					    </ul>
+					</li>
+
+					<li role="presentation" class="dropdown">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					      卖家中心 <span class="caret"></span>
+					    </a>
+					    <ul class="dropdown-menu">
+					    	<li><a class="regist" href="#">我要发布</a></li>
+					    	<li><a class="regist" href="#">出卖中的商品</a></li>
+					    	<li><a class="regist" href="#">订单管理</a></li>
+					    </ul>
+					</li>
+
+					<li><a class="regist" href="#">注销</a></li>
+					<li><a class="admin_entrance" href="#">管理员入口</a></li>
+				</ul>
+
+			</div>
+			
+
+		</div>
+	</nav>
+	
+
+
+	<div class="order center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+					<p class="have_been_published">我的订单</p>
+				</div>
+
+			</div>
+
+			<div class="row item_order">
+				<div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1 ">
+					<div  class="container item_order_container">
+						<div class="row item_order_container_row_title">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>订单号：888888888</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>生成日期：2017-2-5</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<p>买家：李小明（13033333333）</p>
+							</div>
+							
+						</div>
+						<div class="row item_order_container_row_content">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="../../../picture/1.jpg" alt="..." class="img-thumbnail">
+							</div>
+
+
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 content_row_padding">
+								<h4>孙其峰 兰竹</h4>
+								<p>简介：孙其峰所作油墨画</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>价格：3000元</p>
+								<p>数量：1</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>状态：待付款</p>
+								<p>等待平台介入处理</p>
+							</div>
+						</div>
+
+					</div><!-- container -->
+				</div>
+			</div><!-- row -->
+
+
+			<div class="row item_order">
+				<div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1 ">
+					<div  class="container item_order_container">
+						<div class="row item_order_container_row_title">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>订单号：888888888</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>生成日期：2017-2-5</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<p>买家：李小明（13033333333）</p>
+							</div>
+							
+						</div>
+						<div class="row item_order_container_row_content">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="../../../picture/1.jpg" alt="..." class="img-thumbnail">
+							</div>
+
+
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 content_row_padding">
+								<h4>孙其峰 兰竹</h4>
+								<p>简介：孙其峰所作油墨画</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>价格：3000元</p>
+								<p>数量：1</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>状态：买家取消订单</p>
+								<p><a href="#" class="ask_intervene_btn">申请平台介入</a></p>
+							</div>
+						</div>
+
+					</div><!-- container -->
+				</div>
+			</div><!-- row -->
+			
+			<div class="row item_order">
+				<div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1 ">
+					<div  class="container item_order_container">
+						<div class="row item_order_container_row_title">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>订单号：888888888</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>生成日期：2017-2-5</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<p>买家：李小明（13033333333）</p>
+							</div>
+							
+						</div>
+						<div class="row item_order_container_row_content">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="../../../picture/1.jpg" alt="..." class="img-thumbnail">
+							</div>
+
+
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 content_row_padding">
+								<h4>孙其峰 兰竹</h4>
+								<p>简介：孙其峰所作油墨画</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>价格：3000元</p>
+								<p>数量：1</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>状态：已发货</p>
+								<p><a href="#" class="ask_intervene_btn">申请平台介入</a></p>
+							</div>
+						</div>
+						
+
+						<div class="row item_order_container_row_footer">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<p>快递信息：圆通快递&nbsp;&nbsp;&nbsp;&nbsp;单号：888888888888</p>
+							</div>
+						</div>
+
+
+					</div><!-- container -->
+				</div>
+			</div><!-- row -->
+
+
+			<div class="row item_order">
+				<div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1 ">
+					<div  class="container item_order_container">
+						<div class="row item_order_container_row_title">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>订单号：888888888</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>生成日期：2017-2-5</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<p>买家：李小明（13033333333）</p>
+							</div>
+							
+						</div>
+						<div class="row item_order_container_row_content">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="../../../picture/1.jpg" alt="..." class="img-thumbnail">
+							</div>
+
+
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 content_row_padding">
+								<h4>孙其峰 兰竹</h4>
+								<p>简介：孙其峰所作油墨画</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>价格：3000元</p>
+								<p>数量：1</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>状态：交易完成</p>
+								<p><button class="btn btn-default find_evaluation_btn">查看评价</button></p>
+								<p><a href="#" class="ask_intervene_btn">申请平台介入</a></p>
+							</div>
+						</div>
+
+					</div><!-- container -->
+				</div>
+			</div><!-- row -->
+
+
+			
+
+			<div class="row item_order">
+				<div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1 ">
+					<div  class="container item_order_container">
+						<div class="row item_order_container_row_title">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>订单号：888888888</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>生成日期：2017-2-5</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<p>买家：李小明（13033333333）</p>
+							</div>
+							
+						</div>
+						<div class="row item_order_container_row_content">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="../../../picture/1.jpg" alt="..." class="img-thumbnail">
+							</div>
+
+
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 content_row_padding">
+								<h4>孙其峰 兰竹</h4>
+								<p>简介：孙其峰所作油墨画</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>价格：3000元</p>
+								<p>数量：1</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>状态：卖家取消交易</p>
+								<p><a href="#" class="ask_intervene_btn">申请平台介入</a></p>
+							</div>
+						</div>
+
+					</div><!-- container -->
+				</div>
+			</div><!-- row -->
+
+			<div class="row item_order">
+				<div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1 ">
+					<div  class="container item_order_container">
+						<div class="row item_order_container_row_title">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>订单号：888888888</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>生成日期：2017-2-5</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<p>买家：李小明（13033333333）</p>
+							</div>
+							
+						</div>
+						<div class="row item_order_container_row_content">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="../../../picture/1.jpg" alt="..." class="img-thumbnail">
+							</div>
+
+
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 content_row_padding">
+								<h4>孙其峰 兰竹</h4>
+								<p>简介：孙其峰所作油墨画</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>价格：3000元</p>
+								<p>数量：1</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>状态：待发货</p>
+								<p>
+									<!-- 点击发货按钮弹窗  需要显示对方付款时候填写的收货地址等信息，以及提供快递单号和快递公司的输入框 -->
+									<button  type="button" class="btn btn-primary send_goods_window_btn">发货</button>
+								</p>
+								<p><a href="#" class="ask_intervene_btn">申请平台介入</a></p>
+							</div>
+						</div>
+
+					</div><!-- container -->
+				</div>
+			</div><!-- row -->
+
+			<div class="row item_order">
+				<div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1 ">
+					<div  class="container item_order_container">
+						<div class="row item_order_container_row_title">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>订单号：888888888</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>生成日期：2017-2-5</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<p>买家：李小明（13033333333）</p>
+							</div>
+							
+						</div>
+						<div class="row item_order_container_row_content">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="../../../picture/1.jpg" alt="..." class="img-thumbnail">
+							</div>
+
+
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 content_row_padding">
+								<h4>孙其峰 兰竹</h4>
+								<p>简介：孙其峰所作油墨画</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>价格：3000元</p>
+								<p>数量：1</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>状态：申请退货</p>
+								<p><button  type="button" class="btn btn-primary return_goods_window_btn">查看详情</button></p>
+								<p><a href="#" class="ask_intervene_btn">申请平台介入</a></p>
+							</div>
+						</div>
+
+					</div><!-- container -->
+				</div>
+			</div><!-- row -->
+
+
+			<div class="row item_order">
+				<div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-1 ">
+					<div  class="container item_order_container">
+						<div class="row item_order_container_row_title">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>订单号：888888888</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+								<p>生成日期：2017-2-5</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+								<p>买家：李小明（13033333333）</p>
+							</div>
+							
+						</div>
+						<div class="row item_order_container_row_content">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<img src="../../../picture/1.jpg" alt="..." class="img-thumbnail">
+							</div>
+
+
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 content_row_padding">
+								<h4>孙其峰 兰竹</h4>
+								<p>简介：孙其峰所作油墨画</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>价格：3000元</p>
+								<p>数量：1</p>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 content_row_padding">
+								<p>状态：已退货</p>
+								<p><a href="#" class="ask_intervene_btn">申请平台介入</a></p>
+								
+							</div>
+						</div>
+
+					</div><!-- container -->
+				</div>
+			</div><!-- row -->
+
+
+
+			<div class="row">
+				<nav aria-label="Page navigation page" class="page_list">
+				  <ul class="pagination ">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li class="active"><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+			</div><!-- row  -->
+
+
+			
+			<!-- 当刚进入页面还没有加载数据的时候
+			<div class="row">
+				
+				<div style="margin:160px 0px 160px 0px; text-align:center;">
+					<img src="../../../image/loading.gif">
+				</div>
+			</div>		
+			-->
+
+			
+			<!-- 当返回的数量为0的时候
+			<div class="row">
+				<span style="display:block; font-size:28px; margin:160px 0px 30px 0px; text-align:center;">非常抱歉，这里空空如也</span>
+				<span style="display:block; font-size:28px; margin:30px 0px 160px 0px; text-align:center;">请到别的页面去逛逛吧</span>
+			</div>		
+			-->
+
+
+
+
+
+		</div>  <!-- container -->
+	</div>
+	
+
+	<div class="footer">
+		<div class="container">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>企业培训 | 合作事宜 | 版权投诉</p>
+				<p>© 2017 拍拍网. Powered by paipaiwang.net</p>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+
+
+
+
+	<!-- 发货模态框 -->
+	<!-- Large modal -->
+	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#send_goods_window">Large modal</button> -->
+
+	<div class="modal fade" id="send_goods_window" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">请填写发货资料</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="row">
+	            <div class="col-md-3 col-md-offset-1">
+				    <p>收货人：</p>
+	         	</div>
+	         	<div class="col-md-7">
+	         		<p>李小明</p>
+	         	</div>
+	        </div>
+			<div class="row">
+	            <div class="col-md-3 col-md-offset-1">
+				    <p>收货地址：</p>
+	         	</div>
+	         	<div class="col-md-7">
+	         		<p>广东省湛江市麻章区广东海洋大学广东海洋大学广东海洋大学广东海洋大学广东海洋大学广东海洋大学</p>
+	         	</div>
+	        </div>
+	        <div class="row">
+	        	<div class="col-md-3 col-md-offset-1">
+				    <p>手机号码：</p>
+	         	</div>
+	         	<div class="col-md-7">
+	         		<p>13000000000</p>
+	         	</div>
+	           
+	        </div>
+	        <div class="row">
+	            <div class="col-md-3 col-md-offset-1">
+				    <p>邮政编码：</p>
+	         	</div>
+	         	<div class="col-md-7">
+	         		<p>510000</p>
+	         	</div>
+	        </div>
+	        <div class="row">
+	            <div class="col-md-3 col-md-offset-1">
+				    <p>备注：</p>
+	         	</div>
+	         	<div class="col-md-7">
+	         		<p>发票balabalabalabala备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注</p>
+	         	</div>
+	        </div>
+
+
+	        <div class="row">
+	            <div class="col-md-10 col-md-offset-1">
+	          		<div class="input-group">
+					  <span class="input-group-addon" id="sizing-addon2">快递公司：</span>
+					  <input type="text" name="item_name" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+				    </div>
+	         	</div>
+	        </div>
+	        <div class="row">
+	          <div class="col-md-10 col-md-offset-1">
+	          		<div class="input-group">
+					  <span class="input-group-addon" id="sizing-addon2">快递单号：</span>
+					  <input type="text" name="item_name" class="form-control" placeholder="" aria-describedby="sizing-addon2">
+				    </div>
+	          </div>
+	        </div>
+	       
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-default" data-dismiss="modal">取&nbsp;消</button>
+	        <button type="button" class="btn btn-primary ladda-button" data-style="slide-left" id="send_goods_submit_btn">提&nbsp;交</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+	<!-- 退货模态框 -->
+	<div class="modal fade" id="return_goods_window" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">退货理由:</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="row">
+	            <!-- <div class="col-md-3 col-md-offset-1">
+				    <p>退货理由：</p>
+	         	</div> -->
+	         	<div class="col-md-12">
+	         		<p>因为爱情因为爱情因为爱情因为爱情因为爱情因为爱情因为爱情，因为爱情因为爱情因为爱情因为爱情因为爱情因为爱情因为爱情因为爱情因为爱情因为爱情因为爱情因为爱情，因为爱情因为爱情因为爱情因为爱情因为爱情。</p>
+	         	</div>
+	        </div>
+			
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" id="agree_return_btn" class="btn btn-primary ladda-button" data-style="slide-left" >同意退货</button>
+	        <button type="button" id="disagree_return_btn" class="btn btn-danger ladda-button" data-style="slide-left" >拒绝退货</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+	<!-- 申请平台介入模态框 -->
+	<div class="modal fade" id="ask_intervene_window" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">申请平台介入</h4>
+	      </div>
+	      <div class="modal-body">
+
+	        <div class="row">
+	          <div class="col-md-3 center_window_key"><p>申请诉求：</p></div>
+	          <div class="col-md-8"><input type="text" class="form-control" name="realname"></div>
+	        </div>
+	        <div class="row">
+	          <div class="col-md-3 center_window_key"><p>申请原因：</p></div>
+	          <div class="col-md-8">
+				<textarea class="form-control" placeholder="请输入遇到的问题···"></textarea>
+	          </div>
+	        </div>
+	         
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary ladda-button" data-style="slide-left" id="ask_intervene_btn">提&nbsp;交</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- 查看评价内容模态框 -->
+	<div class="modal fade" id="find_evaluation_window" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">买家评价内容:</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="row">
+	            
+	         	<div class="col-md-12">
+	         		<p>好棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒,棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒?棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒.棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒棒,棒棒棒棒棒棒棒棒棒棒棒棒!</p>
+	         	</div>
+	        </div>
+			
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">关&nbsp;闭</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<script src="../../../js/jquery.min.js"></script>
+	<script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/spin.min.js"></script>
+	<script src="../../../js/ladda.min.js"></script>
+	<script src="../../../js/util.js"></script>
+	<script type="text/javascript">
+		$(function () {
+
+
+
+			find_evaluation_btn();//查看评价按钮监听
+
+			pay_auction_btn();//发货按钮监听
+
+			ask_intervene_btn();//申请平台介入按钮监听
+
+			return_goods_btn();//申请退货的相关按钮监听
+
+
+
+
+			//申请平台介入按钮监听
+			function ask_intervene_btn(){
+
+				//弹窗监听
+				$(".ask_intervene_btn").each(function(index){
+					$(this).click(function(){
+						console.info(index);
+						$("#ask_intervene_window").modal('show');
+
+
+						return false;  //禁止页面跳转“#”
+					});
+				});
+
+
+				//提交按钮监听
+				var l_ask_intervene_btn = Ladda.create( document.querySelector( '#ask_intervene_btn' ) );
+				$("#ask_intervene_btn").click(function(){
+					
+					l_ask_intervene_btn.start();
+				});
+
+
+			}
+			
+
+
+
+			//申请退货的相关按钮监听
+			function return_goods_btn(){
+
+				//查看退货详情按钮
+				$(".return_goods_window_btn").each(function(index){
+					$(this).click(function(event){
+
+						$("#return_goods_window").modal('show');
+					});
+				});
+
+
+				//同意退货按钮监听
+				var l_agree_return_btn = Ladda.create( document.querySelector( '#agree_return_btn' ) );
+				$("#agree_return_btn").click(function(){
+					
+					l_agree_return_btn.start();
+				});
+
+
+				//拒绝退货按钮监听
+				var l_disagree_return_btn = Ladda.create( document.querySelector( '#disagree_return_btn' ) );
+				$("#disagree_return_btn").click(function(){
+					
+					l_disagree_return_btn.start();
+				});
+
+			}
+
+
+
+			//查看评价按钮监听
+			function find_evaluation_btn(){
+				$(".find_evaluation_btn").each(function(index){
+					$(this).click(function(event){
+
+						$("#find_evaluation_window").modal("show");
+
+					});//click
+				});//each
+
+			}
+			
+
+
+			//发货监听
+			function pay_auction_btn(){
+
+				//监听发货弹窗按钮
+				$(".send_goods_window_btn").each(function(index){
+					$(this).click(function(event){
+
+						$("#send_goods_window").modal('show');
+					});
+				});
+
+
+				//提交按钮监听
+				var l_send_goods_submit_btn = Ladda.create( document.querySelector( '#send_goods_submit_btn' ) );
+				$("#send_goods_submit_btn").click(function(){
+					
+					l_send_goods_submit_btn.start();
+				});
+			}
+
+
+
+		});
+	</script>
+</body>
+</html>

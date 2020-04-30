@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+
+body{
+	background: #eee;
+}
+
+
+a.logo>img{
+	margin-top: 5%;
+	height:80%;
+}
+
+
+
+#navbar-collapse a.login{
+	color: #f22e00;
+}
+#navbar-collapse a.regist:hover{
+	color: #f22e00;
+}
+
+
+#navbar-collapse #welcome_user{
+	color: #4bb;
+}
+#navbar-collapse .dropdown-menu a{text-align: center;}
+#navbar-collapse .dropdown-menu a:hover{
+	color: #4bb;
+	text-align: center;
+}
+
+
+
+
+
+
+/*顶部导航条遮住的部分*/
+.center{
+	/*background: #eee;*/
+	padding-top: 51px;
+}
+
+.center>.container{
+	/*background: #f8f8f8;*/
+	background: #fff;
+	padding-bottom: 25px;
+}
+
+
+
+
+.footer>.container{
+	/*border-top: #000 10px; */
+	background: #4bb;
+	/*background: #eee;*/
+	padding-top: 20px;
+}
+.footer>.container p{
+	text-align: center;
+	color: #eee;
+}
+
+
+
+
+
+
+/*模态框 用户登录窗口*/
+#login_window{
+	margin : 10% auto 0px;
+
+}
+#login_window h3{
+	margin: 40px auto;
+	text-align: center;
+	/*width: 60%;*/
+	background: #4bb;
+	/*padding: 30px;*/
+	line-height: 100px;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 40px;
+}
+#login_window .login_window_line{
+	width: 80%;
+	margin: 10px auto;
+}
+#login_window .login_window_line input{
+	border-radius: 20px;
+}
+#login_window .find_pwd{
+	/*background: #aaa;*/
+	position: relative;
+	height: 20px;
+
+}
+#login_window .find_pwd a{
+	text-align: right;
+	font-size: 16px;
+	/*display: block;*/
+	position: absolute;
+	right: 10px;
+	color: #999;
+}
+#login_window #remember_account{
+	position: absolute;
+	left: 10px;
+	top: -10px;
+}
+#login_window .login_window_message_line{
+	text-align: center;
+	height:20px;
+}
+#login_window #login_button_submit{
+	border-radius: 20px;
+	background: #4bb;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	color: #fff;
+}
+#login_window #login_button_submit:hover{
+	background: #6bb;
+}
+
+
+#login_window #close_login_window{
+	position: relative;
+	right: 10px;
+	top: 10px;
+}
+#login_window #close_login_window:active{
+	border-color: rgba(255,255,255,0);
+}
+
+/*
+
+body{
+	background: url(../image/login.jpg) no-repeat top center fixed;
+}
+
+textarea{
+	resize: none;
+	
+}
+
+nav>div>ul>li{
+	width:100px;
+	text-align: center;
+
+}
+
+.logo>img{
+	width:230px;
+	margin-top: 5px;
+}
+
+td,th{
+	text-align: center;
+}
+
+
+input{
+	text-align: center;
+
+}
+
+
+
+*/
+
+
+
+
+
+
+
+
+/*
+
+.page>.container{
+	padding-top: 50px;
+	
+	background: rgba(233,233,233,0.8);
+	
+}
+
+.page>.container>.row{
+	margin-bottom: 20px;
+}
+
+
+
+.page>.container>.row .dropdownlist{
+	height: 200px;
+	overflow-y: auto;
+}
+
+*/

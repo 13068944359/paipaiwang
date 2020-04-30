@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+
+
+.regist .page_title{
+	margin-top:50px;
+	font-size: 18px;
+	color: #999;
+}
+
+
+
+
+
+.regist .regist_row{
+	margin-top: 30px;
+}
+.regist .regist_row_last{
+	margin-bottom: 100px;
+}
+
+
+
+
+
+
+.regist input{
+	text-align: center;
+}
+
+
+
+
+
+
+.regist_tip{
+	/*background: #aaa;*/
+	/*margin-top: 5px;*/
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#regist_window .row{
+	margin-top: 20px;
+}
+#regist_window .row>div{
+	/*background: #eee;*/
+}
+
+#regist_window .regist_window_key{
+	/*background: #aaa;*/
+	text-align: center;
+}
+
+
+#regist_window .regist_window_key>p{
+	/*vertical-align: middle;*/
+	padding: 5px;
+	/*background: #eee;*/
+}
+

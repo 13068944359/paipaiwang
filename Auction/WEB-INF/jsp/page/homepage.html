@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>拍拍网</title>
+	<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../css/ladda-themeless.min.css">
+	<link rel="stylesheet" href="../../../css/style.css">
+	<link rel="stylesheet" href="../../../css/homepage.css">
+	
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" style="padding:0;" class="navbar-brand logo"><img src="../../../image/logo.png" alt="首页"></a>
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- 
+			<button class="btn btn-default navbar-btn navbar-left">按钮</button> -->
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					
+					<li><a class="login" id="open_login_window" href="#">亲，请登录</a></li>
+					<li><a class="regist" href="#">注册</a></li>
+					<li><a class="admin_entrance" href="#">管理员入口</a></li>
+				</ul>
+
+			</div>
+			
+		</div>
+	</nav>
+	
+
+
+	<div class="homepage center">
+		<div class="container">
+
+			<div class="row search_row">
+				<div class="col-lg-8 col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 search">
+					<div class="input-group">
+				      <input type="text" class="form-control" id="search_frame" placeholder="请输入要搜索的商品">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button" id="search_btn"><span class="glyphicon glyphicon-search"></span>&nbsp;搜索</button>
+				      </span>
+				    </div>
+				</div>
+			</div>
+			
+			<div class="row nav_row">
+				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-lg-offset-1">
+					<ul class="nav nav-tabs">
+					  <li role="presentation" class="active"><a href="#">首页</a></li>
+					  <li role="presentation" class="dropdown">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">书<span class="hidden-md hidden-sm hidden-xs">法绘</span>画<span class="caret"></span>
+					    </a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">绘画</a></li>
+					      <li><a href="#">书法</a></li>
+					      <li><a href="#">古籍文献</a></li>
+					    </ul>
+					  </li>
+					  <li role="presentation" class="dropdown">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">西画雕塑<span class="caret"></span>
+					    </a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">油画</a></li>
+					      <li><a href="#">水彩</a></li>
+					      <li><a href="#">雕塑</a></li>
+					    </ul>
+					  </li>
+					  <li role="presentation" class="dropdown">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">古瓷珠宝<span class="caret"></span>
+					    </a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">玉器</a></li>
+					      <li><a href="#">陶瓷</a></li>
+					      <li><a href="#">木器</a></li>
+					    </ul>
+					  </li>
+					   <li role="presentation" class="dropdown">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">当代工艺<span class="caret"></span>
+					    </a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">珠宝</a></li>
+					      <li><a href="#">金属器</a></li>
+					    </ul>
+					  </li>
+					  <li role="presentation"><a href="#"><span class="hidden-md hidden-sm hidden-xs">各类</span>杂货</a></li>
+					  <li role="presentation"><a href="#">二手<span class="hidden-md hidden-sm hidden-xs">商品</span></a></li>
+					  <li role="presentation" class="hidden-sm hidden-xs"><a href="#" id="nav_no">丨</a></li>
+
+					  <li role="presentation"><a href="#">每日一拍</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 col-lg-offset-1">
+
+					<div id="paipai_carousel" class="carousel slide">
+						<ol class="carousel-indicators">
+							<li data-target="#paipai_carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#paipai_carousel" data-slide-to="1"></li>
+							<li data-target="#paipai_carousel" data-slide-to="2"></li>
+							<li data-target="#paipai_carousel" data-slide-to="3"></li>
+						</ol>
+						<!-- 下面的图片默认是不居中的，此处居中是因为引入了自己编写的css文件 -->
+						<div class="carousel-inner">
+							<div class="item active advImg" >
+								<a href="#"><img src="../../../image/1.jpg" alt=""></a>
+							</div>
+							<div class="item advImg">
+								<a href="#"><img src="../../../image/2.jpg" alt=""></a>
+							</div>
+							<div class="item advImg">
+								<a href="#"><img src="../../../image/1.jpg" alt=""></a>
+							</div>
+							<div class="item advImg">
+								<a href="#"><img src="../../../image/3.jpg" alt=""></a>
+							</div>
+						</div>
+						<a href="#paipai_carousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+						<a href="#paipai_carousel" data-slide="next" class="carousel-control right">&rsaquo;</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row item_row">
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6  col-lg-offset-1">
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/1.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>朱继展 牵牛花</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/2.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>孙其峰 兰竹</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-lg-offset-0">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/3.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>孙其峰 松</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/4.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>宋朝 瓷碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart-empty">点击收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+
+
+				<!-- ///////////////////////////////////////// -->
+				
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-lg-offset-1">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-lg-offset-1">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
+
+					<div class="item">
+						<div class="picture">
+				        	<img src="../../../picture/5.jpg" alt="" >
+				      	</div>
+				      	
+				        <h5>青花瓷 碗</h5>
+				        <span class="price">￥22000.00</span>
+				        <p class="offline_time">下线时间：2/27 14:02</p>
+				    	<a href="" class="collection"><span class="glyphicon glyphicon-heart">已收藏</span></a>
+				    </div>
+				</div>
+
+			</div>
+
+			<!-- 当返回的数量为0的时候
+			<div class="row">
+				<span style="display:block; font-size:28px; margin:160px 0px 30px 0px; text-align:center;">非常抱歉，这里空空如也</span>
+				<span style="display:block; font-size:28px; margin:30px 0px 160px 0px; text-align:center;">请到别的页面去逛逛吧</span>
+			</div>		
+			-->
+
+			<!-- 当刚进入页面还没有加载数据的时候
+			<div class="row">
+				
+				<div style="margin:160px 0px 160px 0px; text-align:center;">
+					<img src="../../../image/loading.gif">
+				</div>
+			</div>		
+			-->
+			
+		</div>
+	</div>
+	
+
+	<div class="footer">
+		<div class="container">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>企业培训 | 合作事宜 | 版权投诉</p>
+				<p>© 2017 拍拍网. Powered by paipaiwang.net</p>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+
+
+
+	<!-- Small modal   
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+-->
+
+
+	<div class="modal  fade bs-example-modal-sm" tabindex="-1" id="login_window" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+
+	    	<button type="button" id="close_login_window" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		
+	        <h3><span class="glyphicon glyphicon-user"></span></h3>
+	        <div class="login_window_line">
+	        	<input type="text" class="form-control" placeholder="用户名/手机">
+	        </div>
+	        <div class="login_window_line">
+	        	<input type="password" class="form-control" placeholder="密码">
+	        </div>
+
+			<div class="login_window_line find_pwd">
+				<div class="checkbox" id="remember_account">
+			        <label>
+			          <input type="checkbox"> 记住用户名
+			        </label>
+			    </div>
+
+			    <a href="#">找回密码</a>
+			</div>
+
+			<div class="text-danger login_window_message_line" id="login_window_message">
+				
+			</div>
+
+			<div class="login_window_line">
+				<button id="login_button_submit" type="button" class="btn  btn-block ladda-button" data-style="slide-left">登录</button>
+			</div>
+	    </div>
+	  </div>
+	</div>
+		
+
+
+	<script src="../../../js/jquery.min.js"></script>
+	<script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/spin.min.js"></script>
+	<script src="../../../js/ladda.min.js"></script>
+	<script src="../../../js/util.js"></script>
+	<script type="text/javascript">
+		$(function () {
+
+			
+
+			
+
+			carousel_btn_center();//设置轮播图中的按钮垂直居中
+			carousel_auto();//轮播自动播放
+			
+			
+
+
+
+
+
+
+			//设置轮播图中的按钮垂直居中
+			function carousel_btn_center(){
+				$('.carousel-control').css('line-height', $('.carousel-inner img').height() + 'px');
+				$(window).resize(function () {
+					var $height = $('.carousel-inner img').eq(0).height() || 
+								  $('.carousel-inner img').eq(1).height() || 
+								  $('.carousel-inner img').eq(2).height();
+					$('.carousel-control').css('line-height', $height + 'px');
+				});
+
+				
+			}
+			//轮播自动播放
+			function carousel_auto(){
+				$('#paipai_carousel').carousel({
+					//自动4秒播放
+					interval : 4000,
+				});
+
+			}
+
+
+
+
+			
+
+			
+		});
+	</script>
+</body>
+</html>

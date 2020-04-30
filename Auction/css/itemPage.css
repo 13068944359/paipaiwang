@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+
+
+/*
+
+.homepage>.container{
+	margin-top: 50px;
+	margin-top: 200px;
+
+}
+
+*/
+.container .row{
+	margin:10px 0;
+}
+
+
+
+
+/*搜索框*/
+.itemPage>.container>.search_row{
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+.itemPage>.container>.row>.search{
+	color: #aaa;
+	height: 50px;
+}
+.itemPage>.container>.row>.search #search_frame,
+.itemPage>.container>.row>.search #search_btn{
+	vertical-align: center;
+	height: 45px;
+	font-size: 20px;
+	box-shadow: 1px 1px 1px #7bb;
+	color: #0bb;
+	z-index: 0
+	font-weight: bold;
+
+}
+.itemPage>.container>.row>.search #search_btn{ z-index: 1}
+
+
+
+
+/*分类导航*/
+.itemPage>.container>.nav_row a{	color: #7bb;}
+.itemPage>.container>.nav_row li.active a{	font-weight: bold;}
+.itemPage>.container>.nav_row #nav_no:hover{
+	background: rgba(255,255,255,0);
+	cursor:default;
+	border-color: rgba(255,255,255,0);
+}
+
+
+
+/*图片高度固定*/
+.itemPage #item_picture{height:400px;}
+
+
+/*图片右边的部分*/
+/*.inner_container {	background: #eee;}*/
+.itemPage .inner_container #item_name{
+	padding-left: 40px;
+	padding-right: 40px;
+
+}
+.itemPage .inner_container #item_brief{
+	padding-left: 50px;
+	padding-right:  50px;
+}
+
+.itemPage .inner_container h3{	color: #000;}   /*商品名称深颜色*/
+
+/*拍卖商品的时间*/
+.itemPage .inner_container .time_row{
+	font-size: 17px;
+	color: #999;
+}
+/*价格表格*/
+.itemPage .inner_container .price_row{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 20px;
+}
+
+/*当前价格高亮显示*/
+.itemPage .inner_container .price_row #current_price{	color: #4bb;}  
+
+/*当前竞拍最高出价者*/
+.itemPage .inner_container #current_action_name{
+	text-align: center;
+	font-size: 15px;
+}
+
+
+/*出价价格显示框*/
+.itemPage .inner_container #want_to_buy_money{
+	text-align: center;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+.itemPage>.container .item_message_row{
+	margin-top: 50px;
+}
+
+.itemPage>.container .item_message_row h3{
+	text-align: center;
+	/*background: #4bb;*/
+	color: #4bb;
+}
+
+/*鉴图片固定宽度*/
+.itemPage>.container .item_message_row #item_identify_picture{
+	width:300px;
+}
+
+
+
+
+
+
