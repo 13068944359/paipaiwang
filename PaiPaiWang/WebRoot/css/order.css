@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+
+.order .have_been_published{
+	margin-top:20px;
+	font-size: 18px;
+	color: #999;
+}
+
+
+
+
+
+.order .item_order_container{	width: 100%;}
+.order .item_order{	margin-bottom: 20px;}
+
+.order .item_order_container .item_order_container_row_title{
+	background: #6cc;
+	color: #fff;
+}
+.order .item_order_container .item_order_container_row_title p{	margin: 10px 0px ;}
+
+.order .item_order_container .item_order_container_row_content{	background: #eee;}
+
+.order .item_order_container .item_order_container_row_content>div{
+	/*background: #999;*/
+	/*border-width: 5px;*/
+	border-top: 3px;
+	border-color: #000;
+
+	margin: 10px 0px; 
+}
+.order .item_order_container .item_order_container_row_content .content_row_padding{	padding-top: 35px; }
+.order .item_order_container .item_order_container_row_content>div>h4{
+	margin-top: 0px;
+	margin-bottom: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.order .item_order_container .item_order_container_row_content>div>h4:hover{	color: #4bb;}
+.order .item_order_container .item_order_container_row_content>div>p{
+
+	text-align: center;
+}
+.order .item_order_container .item_order_container_row_content img{	height: 150px;}
+
+.order .item_order_container .item_order_container_row_footer{
+	background: #bcc;
+}
+.order .item_order_container .item_order_container_row_footer p{
+	margin: 10px 0px;
+	/*color: #fff;*/
+	text-align: center;
+}
+
+
+.order .page_list{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*发货模态框*/
+#send_goods_window .row{
+	margin: 20px;
+}
+
+
+
+
+/*退货模态框*/
+#return_goods_window textarea{
+	height:100px;
+	resize: none;
+	
+}
+
+
+/*评价模态框*/
+#evaluate_window textarea{
+	height:100px;
+	resize: none;
+}
+
+
+
+/*付款的模态框*/
+#pay_confirm_window .row{
+	line-height: 30px;
+}
+#pay_confirm_window .first_row{
+	margin-top: 30px;
+}
+
+
+
+
+/*申请介入的模态框*/
+#ask_intervene_window .row{
+	margin-top: 20px;
+}
+#ask_intervene_window .row p{
+	padding: 5px;
+}
+#ask_intervene_window .row textarea{
+	resize: none;
+	height: 200px;
+}

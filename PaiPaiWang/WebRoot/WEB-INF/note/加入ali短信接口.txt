@@ -1,0 +1,4 @@
+aliyun-java-sdk-core-3.3.1.jar
+aliyun-java-sdk-dysmsapi-1.0.0.jar
+
+调用方法在com.paipaiwang.thirdparty中

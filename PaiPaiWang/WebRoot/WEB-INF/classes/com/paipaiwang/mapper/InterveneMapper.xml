@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.paipaiwang.dao.InterveneMapper" >
+  <resultMap id="BaseResultMap" type="com.paipaiwang.po.Intervene" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="BIT" />
+    <result column="order_id" property="orderId" jdbcType="INTEGER" />
+    <result column="for_what" property="forWhat" jdbcType="VARCHAR" />
+    <result column="for_why" property="forWhy" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="BIT" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, type, order_id, for_what, for_why, state, remark, create_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_intervene
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_intervene
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.paipaiwang.po.Intervene" >
+    insert into t_intervene (id, type, order_id, 
+      for_what, for_why, state, 
+      remark, create_time)
+    values (#{id,jdbcType=INTEGER}, #{type,jdbcType=BIT}, #{orderId,jdbcType=INTEGER}, 
+      #{forWhat,jdbcType=VARCHAR}, #{forWhy,jdbcType=VARCHAR}, #{state,jdbcType=BIT}, 
+      #{remark,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.paipaiwang.po.Intervene" >
+    insert into t_intervene
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="orderId != null" >
+        order_id,
+      </if>
+      <if test="forWhat != null" >
+        for_what,
+      </if>
+      <if test="forWhy != null" >
+        for_why,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=BIT},
+      </if>
+      <if test="orderId != null" >
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="forWhat != null" >
+        #{forWhat,jdbcType=VARCHAR},
+      </if>
+      <if test="forWhy != null" >
+        #{forWhy,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=BIT},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.paipaiwang.po.Intervene" >
+    update t_intervene
+    <set >
+      <if test="type != null" >
+        type = #{type,jdbcType=BIT},
+      </if>
+      <if test="orderId != null" >
+        order_id = #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="forWhat != null" >
+        for_what = #{forWhat,jdbcType=VARCHAR},
+      </if>
+      <if test="forWhy != null" >
+        for_why = #{forWhy,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=BIT},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.paipaiwang.po.Intervene" >
+    update t_intervene
+    set type = #{type,jdbcType=BIT},
+      order_id = #{orderId,jdbcType=INTEGER},
+      for_what = #{forWhat,jdbcType=VARCHAR},
+      for_why = #{forWhy,jdbcType=VARCHAR},
+      state = #{state,jdbcType=BIT},
+      remark = #{remark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+  
+  
+  
+  <update id="handleInterveneByOrderId" parameterType="com.paipaiwang.po.Intervene" >
+    update t_intervene
+    set 
+      state = 1
+    where order_id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+  
+  
+  
+  
+   <!-- 通过关键字分页查询, 返回数据集 -->
+  <select id="selectPageList" parameterType="page" resultMap="BaseResultMap" >
+    select 
+    
+    <include refid="Base_Column_List" />
+    
+    from t_intervene
+      <where>
+      <if test="keyWord!=null">
+      	<bind name="key" value="'%' + keyWord + '%'"/>
+      	and   ( order_id like #{key}  ) 
+      </if>
+	  </where>
+      limit #{start},#{rows}
+  </select>
+  <!-- 通过关键字分页查询，返回总记录数 #{keyWord}-->
+  <select id="selectPageCount" parameterType="page" resultType="Integer">
+  	select count(1) from t_intervene
+  	 <where>
+      <if test="keyWord!=null">
+      	<bind name="key" value="'%' + keyWord + '%'"/>
+      	and   ( order_id like #{key}  ) 
+      </if>
+	  </where>
+  </select>
+  
+  
+  
+  <!-- 获取订单的买家或者卖家的纠纷处理申请-->
+   <select id="selectByOrderIdAndType" resultMap="BaseResultMap" parameterType="com.paipaiwang.po.Intervene">
+    select 
+    <include refid="Base_Column_List" />
+    from t_intervene
+    where order_id=#{id} and type=#{type}
+  </select>
+  
+  
+</mapper>

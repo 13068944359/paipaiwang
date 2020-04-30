@@ -1,0 +1,81 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<c:set var="path" value="${pageContext.request.contextPath}" />
+
+<!-- 用户尚未登录 -->
+<c:if test="${user==null}">
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="${path}" style="padding:0;" class="navbar-brand logo"><img src="${path}/image/logo.png" alt="首页"></a>
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- 
+			<button class="btn btn-default navbar-btn navbar-left">按钮</button> -->
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					
+					<li><a class="login" id="open_login_window" href="#">亲，请登录</a></li>
+					<li><a class="regist" href="${path}/page/regist">注册</a></li>
+					<li><a class="admin_entrance" href="${path}/admin/loginPage" target="_blank">管理员入口</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+</c:if>
+<!-- 用户已经登录 -->
+<c:if test="${user!=null}">
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="${path}" style="padding:0;" class="navbar-brand logo"><img src="${path}/image/logo.png" alt="首页"></a>
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- 
+			<button class="btn btn-default navbar-btn navbar-left">按钮</button> -->
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+
+					<li role="presentation" class="dropdown">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="welcome_user">
+					      欢迎您，<span id="username">${user.username}</span> <span class="caret"></span>
+					    </a>
+					    <ul class="dropdown-menu">
+					    	<li><a class="regist" href="${path}/page/buyOrder">我的订单</a></li>
+					    	<li><a class="regist" href="${path}/page/personCenter">个人中心</a></li>
+					    	<li><a class="regist" href="${path}/page/myAuction">我的竞拍</a></li>
+					    	<li><a class="regist" href="${path}/page/myCollection">我的收藏</a></li>
+					    </ul>
+					</li>
+
+					<li role="presentation" class="dropdown">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					      卖家中心 <span class="caret"></span>
+					    </a>
+					    <ul class="dropdown-menu">
+					    	<li><a class="regist" href="${path}/page/publish">我要发布</a></li>
+					    	<li><a class="regist" href="${path}/page/published">已发布的商品</a></li>
+					    	<li><a class="regist" href="${path}/page/sellOrder">订单管理</a></li>
+					    </ul>
+					</li>
+
+					<li><a id="logout" href="#">注销</a></li>
+					<li><a class="admin_entrance" href="${path}/admin/loginPage">管理员入口</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+</c:if>

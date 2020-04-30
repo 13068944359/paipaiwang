@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.paipaiwang.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.paipaiwang.po.User" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="mobiphone" property="mobiphone" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="realname" property="realname" jdbcType="VARCHAR" />
+    <result column="idcard" property="idcard" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="INTEGER" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="postcode" property="postcode" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="user_money" property="userMoney" jdbcType="DOUBLE" />
+    <result column="freeze" property="freeze" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, mobiphone, username, password, realname, idcard, gender, email, address, postcode, 
+    remark, user_money, freeze
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.paipaiwang.po.User" >
+    insert into t_user (id, mobiphone, username, 
+      password, realname, idcard, 
+      gender, email, address, 
+      postcode, remark, user_money, 
+      freeze)
+    values (#{id,jdbcType=INTEGER}, #{mobiphone,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, #{idcard,jdbcType=VARCHAR}, 
+      #{gender,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{postcode,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{userMoney,jdbcType=DOUBLE}, 
+      #{freeze,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.paipaiwang.po.User" >
+    insert into t_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="mobiphone != null" >
+        mobiphone,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="realname != null" >
+        realname,
+      </if>
+      <if test="idcard != null" >
+        idcard,
+      </if>
+      <if test="gender != null" >
+        gender,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="postcode != null" >
+        postcode,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="userMoney != null" >
+        user_money,
+      </if>
+      <if test="freeze != null" >
+        freeze,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="mobiphone != null" >
+        #{mobiphone,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard != null" >
+        #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="userMoney != null" >
+        #{userMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="freeze != null" >
+        #{freeze,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.paipaiwang.po.User" >
+    update t_user
+    <set >
+      <if test="mobiphone != null" >
+        mobiphone = #{mobiphone,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard != null" >
+        idcard = #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        gender = #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        postcode = #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="userMoney != null" >
+        user_money = #{userMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="freeze != null" >
+        freeze = #{freeze,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.paipaiwang.po.User" >
+    update t_user
+    set mobiphone = #{mobiphone,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      idcard = #{idcard,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=INTEGER},
+      email = #{email,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      postcode = #{postcode,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      user_money = #{userMoney,jdbcType=DOUBLE},
+      freeze = #{freeze,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+  
+  
+
+  <!-- 通过关键字分页查询, 返回数据集 -->
+  <select id="selectPageList" parameterType="page" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" /> 
+    from t_user 
+      <where>
+      <if test="keyWord!=null">
+      	<bind name="key" value="'%' + keyWord + '%'"/>
+      	and  ( mobiphone like #{key} 
+      	or username like #{key}
+      	or realname like #{key}
+      	or idcard like #{key}
+      	or email like #{key})
+      </if>
+	  </where>
+      limit #{start},#{rows}
+  </select>
+  <!-- 通过关键字分页查询，返回总记录数 #{keyWord}-->
+  <select id="selectPageCount" parameterType="page" resultType="Integer">
+  	select count(1) from t_user 
+  	 <where>
+       <if test="keyWord!=null">
+      	<bind name="key" value="'%' + keyWord + '%'"/>
+      	and  ( mobiphone like #{key} 
+      	or username like #{key}
+      	or realname like #{key}
+      	or idcard like #{key}
+      	or email like #{key})
+      </if>
+	  </where>
+  </select>
+  
+  <!-- 根据手机号查找帐号 -->
+  <select id="selectByMobilephone" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user
+    where mobiphone = #{mobile,jdbcType=VARCHAR}
+  </select>
+  
+  
+</mapper>

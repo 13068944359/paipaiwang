@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+
+
+/*
+
+.homepage>.container{
+	margin-top: 50px;
+	margin-top: 200px;
+
+}
+
+*/
+.container .row{
+	margin:10px 0;
+}
+
+
+
+
+
+/*搜索框*/
+.homepage>.container>.search_row{
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+.homepage>.container>.row>.search{
+	color: #aaa;
+	/*background: rgb(242,242,242);*/
+	/*border-radius: 20px;*/
+	/*text-align: center;*/
+	height: 50px;
+}
+.homepage>.container>.row>.search #search_frame,
+.homepage>.container>.row>.search #search_btn{
+	vertical-align: center;
+	height: 45px;
+	font-size: 20px;
+	box-shadow: 1px 1px 1px #7bb;
+	color: #0bb;
+	z-index: 0
+	font-weight: bold;
+
+}
+.homepage>.container>.row>.search #search_btn{ z-index: 1}
+
+
+
+
+/*分类导航*/
+.homepage>.container>.nav_row a{
+	color: #7bb;
+}
+.homepage>.container>.nav_row li.active a{
+	font-weight: bold;
+}
+
+.homepage>.container>.nav_row #nav_no:hover{
+	background: rgba(255,255,255,0);
+	cursor:default;
+	border-color: rgba(255,255,255,0);
+}
+
+
+
+
+
+
+
+
+
+
+/*商品列表*/
+.homepage>.container>.item_row{
+}
+.homepage>.container>.item_row .item{
+	height: 280px;
+	background: #f8f8f8;
+	padding: 10px;
+	position: relative;
+}
+.homepage>.container>.item_row .item:hover{
+	box-shadow: 2px 2px 2px #7bb;
+}
+.homepage>.container>.item_row .item>.picture{
+	height: 60%;
+	/*background: #eee;*/
+}
+.homepage>.container>.item_row .item>.picture>img{
+	height: 100%;
+	width: 100%;
+	cursor:pointer;
+}
+.homepage>.container>.item_row>div{
+	padding-top: 10px;
+	margin-bottom:20px;
+}
+
+.homepage>.container>.item_row h5{
+	font-weight: bold;
+	cursor: pointer;
+}
+.homepage>.container>.item_row h5:hover{	color: #4bb; }
+.homepage>.container>.item_row .offline_time{
+	font-size: 5px;
+}
+.homepage>.container>.item_row .price{
+	font-size: 15px;
+	color: red;
+}
+.homepage>.container>.item_row .collection{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #888;
+	text-align: right;
+}
+.homepage>.container>.item_row .collection>.glyphicon-heart{
+	color: RGB(255,69,0);
+}
+
+
+/*
+.homepage>.container>.item_row>div>.thumbnail{
+	height: 100%;
+}
+*/
+
+
+
+

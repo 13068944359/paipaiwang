@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+
+
+.myCollection .page_title{
+	margin-top:20px;
+	font-size: 18px;
+	color: #999;
+}
+
+
+
+.myCollection>.container>.path_row{
+	margin-top: 10px;
+	/*background: #fff;*/
+	color: #000;
+}
+.myCollection>.container>.path_row #path{
+	color: #aaa;
+}
+
+
+/*商品列表*/
+.myCollection>.container>.item_row{
+	
+}
+.myCollection>.container>.item_row .item{
+	height: 280px;
+	background: #f8f8f8;
+	padding: 10px;
+	position: relative;
+}
+.myCollection>.container>.item_row .item:hover{
+	box-shadow: 2px 2px 2px #7bb;
+}
+.myCollection>.container>.item_row .item>.picture{
+	height: 60%;
+	/*background: #eee;*/
+}
+.myCollection>.container>.item_row .item>.picture>img{
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+.myCollection>.container>.item_row>div{
+	padding-bottom : 20px;
+}
+
+.myCollection>.container>.item_row h5{	font-weight: bold;}
+.myCollection>.container>.item_row h5:hover{
+	cursor: pointer;
+	color: #4bb;
+}
+.myCollection>.container>.item_row .offline_time{
+	font-size: 5px;
+}
+.myCollection>.container>.item_row .price{
+	font-size: 15px;
+	color: red;
+}
+.myCollection>.container>.item_row .collection{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #888;
+	text-align: right;
+}
+.myCollection>.container>.item_row .collection>.delete_collection:hover{
+	color: RGB(255,69,0);
+}
+
+
+
+
+
+
+
+/*分页页码*/
+.myCollection>.container>.page_row{
+	margin-top: 10px;
+}
+.myCollection>.container .page_list{
+	/*padding:0 auto;*/
+	text-align: center;
+}
+/*
+.myCollection>.container>.item_row>div>.thumbnail{
+	height: 100%;
+}
+*/
+
+
+
+

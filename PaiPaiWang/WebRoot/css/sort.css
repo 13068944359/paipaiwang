@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+
+
+
+/*搜索框*/
+.sort>.container>.search_row{
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+.sort>.container>.row>.search{
+	color: #aaa;
+	/*background: rgb(242,242,242);*/
+	/*border-radius: 20px;*/
+	/*text-align: center;*/
+	height: 50px;
+}
+.sort>.container>.row>.search #search_frame,
+.sort>.container>.row>.search #search_btn{
+	vertical-align: center;
+	height: 45px;
+	font-size: 20px;
+	box-shadow: 1px 1px 1px #7bb;
+	color: #0bb;
+	z-index: 0
+	font-weight: bold;
+
+}
+.sort>.container>.row>.search #search_btn{ z-index: 1}
+
+
+
+
+/*分类导航*/
+.sort>.container>.nav_row a{
+	color: #7bb;
+}
+.sort>.container>.nav_row li.active a{
+	font-weight: bold;
+}
+/*分类导航中，一竖杠不需要任何的hover效果，故进行透明*/
+.sort>.container>.nav_row #nav_no:hover{
+	background: rgba(255,255,255,0);
+	cursor:default;
+	border-color: rgba(255,255,255,0);
+}
+
+
+
+
+
+
+
+.sort>.container>.path_row{
+	margin-top: 10px;
+	/*background: #fff;*/
+	color: #000;
+}
+.sort>.container>.path_row #path{
+	color: #aaa;
+}
+
+
+/*商品列表*/
+.sort>.container>.item_row{
+	
+}
+.sort>.container>.item_row .item{
+	height: 280px;
+	background: #f8f8f8;
+	padding: 10px;
+	position: relative;
+}
+.sort>.container>.item_row .item:hover{
+	box-shadow: 2px 2px 2px #7bb;
+}
+.sort>.container>.item_row .item>.picture{
+	height: 60%;
+	/*background: #eee;*/
+}
+.sort>.container>.item_row .item>.picture>img{
+	height: 100%;
+	width: 100%;
+}
+.sort>.container>.item_row>div{
+	padding-bottom : 20px;
+}
+
+.sort>.container>.item_row h5{
+	font-weight: bold;
+	cursor: pointer;
+}
+.sort>.container>.item_row h5:hover{	color: #4bb; }
+
+.sort>.container>.item_row .offline_time{
+	font-size: 5px;
+}
+.sort>.container>.item_row .price{
+	font-size: 15px;
+	color: red;
+}
+.sort>.container>.item_row .collection{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #888;
+	text-align: right;
+}
+.sort>.container>.item_row .collection>.glyphicon-heart{
+	color: RGB(255,69,0);
+}
+
+
+
+
+
+
+
+/*分页页码*/
+.sort>.container>.page_row{
+	margin-top: 10px;
+}
+.sort>.container .page_list{
+	/*padding:0 auto;*/
+	text-align: center;
+}
+/*
+.sort>.container>.item_row>div>.thumbnail{
+	height: 100%;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+

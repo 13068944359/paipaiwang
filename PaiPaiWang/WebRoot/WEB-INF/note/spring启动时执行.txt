@@ -1,0 +1,13 @@
+实现接口   ApplicationListener<ContextRefreshedEvent>
+并实现其中的 onApplicationEvent(ContextRefreshedEvent event)  方法
+
+则spring的容器初始化完成之后则会执行此方法
+
+但是当web系统中使用了spring-mvc时，由于系统中有root application context容器，又有projectName-servlet context作为其子容器
+也就是说web项目中具有两个容器，当web项目启动，root根容器会先初始化，调用一次方法，然后子容器进行初始化，又再执行一次
+最终会执行两次
+
+
+解决方法：
+1、不使用实现接口的方法，在想要执行的方法上使用@PostConstruct  注解即可
+2、在上述实现的方法中，进行如下判断

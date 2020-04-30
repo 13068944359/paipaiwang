@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">  <!-- 用于设置log4j自身内部的信息输出，可以不设置 -->
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [[[[ %msg ]]]] [%t] %-5level %logger{36} - %n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="INFO">    <!-- // 这儿为trace表示什么都可以打印出来了,其他几个级别分别为：TRACE、DEBUG、INFO、WARN、ERROR和FATAL -->
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>

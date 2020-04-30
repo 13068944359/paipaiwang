@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+
+.myAuction .have_been_published{
+	margin-top:20px;
+	font-size: 18px;
+	color: #999;
+}
+
+
+
+
+
+.myAuction .row_myAuction_container{	width: 100%;}
+.myAuction .row_myAuction{	margin-bottom: 20px;}
+
+.myAuction .row_myAuction_container .row_myAuction_container_row_title{
+	background: #9cc;
+	color: #fff;
+}
+.myAuction .row_myAuction_container .row_myAuction_container_row_title p{	margin: 10px 0px ;}
+
+.myAuction .row_myAuction_container .row_myAuction_container_row_content{	background: #eee;}
+
+.myAuction .row_myAuction_container .row_myAuction_container_row_content>div{
+	/*background: #999;*/
+	/*border-width: 5px;*/
+	border-top: 3px;
+	border-color: #000;
+
+	margin: 10px 0px; 
+}
+.myAuction .row_myAuction_container .row_myAuction_container_row_content .content_row_padding{	padding-top: 35px; }
+.myAuction .row_myAuction_container .row_myAuction_container_row_content>div>h4{
+	margin-top: 0px;
+	margin-bottom: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.myAuction .row_myAuction_container .row_myAuction_container_row_content>div>h4:hover{	color: #4bb;}
+.myAuction .row_myAuction_container .row_myAuction_container_row_content>div>p{
+	text-align: center;
+}
+.myAuction .row_myAuction_container .row_myAuction_container_row_content img{
+	height: 150px;
+}
+
+
+
+.myAuction .page_list{
+	text-align: center;
+}
+
+
+
+
+
+

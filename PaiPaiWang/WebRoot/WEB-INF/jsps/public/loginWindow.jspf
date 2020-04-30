@@ -1,0 +1,41 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<c:set var="path" value="${pageContext.request.contextPath}" />
+
+
+	<!-- Small modal   
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+-->
+	<div class="modal  fade bs-example-modal-sm" tabindex="-1" id="login_window" role="dialog" aria-labelledby="mySmallModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+
+	    	<button type="button" id="close_login_window" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		
+	        <h3><span class="glyphicon glyphicon-user"></span></h3>
+	        <div class="login_window_line">
+	        	<input type="text" id="login_username" class="form-control" placeholder="用户名/手机">
+	        </div>
+	        <div class="login_window_line">
+	        	<input type="password" id="login_pwd" class="form-control" placeholder="密码">
+	        </div>
+
+			<div class="login_window_line find_pwd">
+				<div class="checkbox" id="remember_account">
+			        <label>
+			          <input type="checkbox" id="remember_phone"> 记住用户名
+			        </label>
+			    </div>
+
+			    <a href="#">找回密码</a>
+			</div>
+
+			<div class="text-danger login_window_message_line" id="login_window_message">
+				
+			</div>
+
+			<div class="login_window_line">
+				<button id="login_button_submit" type="button" class="btn  btn-block ladda-button" data-style="slide-left">登录</button>
+			</div>
+	    </div>
+	  </div>
+	</div>

@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+
+
+/*
+
+.sort>.container{
+	margin-top: 50px;
+	margin-top: 200px;
+
+}
+
+*/
+
+
+
+
+.publish .want_to_publish{
+	margin-top:20px;
+	font-size: 18px;
+	color: #999;
+	
+}
+
+
+
+
+
+
+
+.publish .item_message{
+	margin-bottom: 20px;
+}
+
+.publish .item_message img.item_img{
+	width:30%;
+	margin-right:5px;
+}
+.publish .item_message img.verify_img{
+	width:100%;
+}
+
+
+.publish  textarea{
+	/*width:50%;*/
+	width: 100%;
+	height: 200px;
+	resize: none;
+}
+
+
+
+
+
+
+.publish option:hover{
+	/*text-align: center;*/
+	color: red;
+}
+
+
+/*提示信息下移，使与input元素对齐*/
+.publish .item_message .tip{
+	position: relative;
+	top: 5px;
+	color:#999;
+}
+
+
+
+
+.publish .item_message #publish_submit{
+	background: #4bb;
+	color: #fff;
+}
+.publish .item_message #publish_submit:hover{
+	background: #7bb;
+	/*color: #fff;*/
+}
+
+
+
+
+
+
+
+/*模态框 卖家缴纳保证金窗口*/
+#pay_earnest_window{
+	margin : 10% auto;
+
+}
+
+
+
+
+
+
+.nondisplay{
+	display:none;
+}

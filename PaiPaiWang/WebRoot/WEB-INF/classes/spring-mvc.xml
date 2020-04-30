@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<!-- 扫描所有的controller 但是不扫描service -->
+	<context:component-scan base-package="com.paipaiwang.controller">
+		<!-- <context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Service" /> -->
+	</context:component-scan>
+	
+	<!-- 配置包扫描器（用于websocket） 
+    <context:component-scan base-package="com.paipaiwang.websocket"></context:component-scan>	-->   
+	
+	
+    <!-- 如果没有<mvc:annotation-driven/>，
+	那么所有的Controller可能就没有解析，所有当有请求时候都没有匹配的处理请求类，
+	就都去<mvc:default-servlet-handler/>即default servlet处理了
+	添加上<mvc:annotation-driven/>后，相应的do请求被Controller处理
+	而静态资源因为没有相应的Controller就会被default servlet处理
+	总之没有相应的Controller就会被default servlet处理就ok了 -->
+	
+	<mvc:annotation-driven/>
+	
+	<!-- 资源映射 -->
+	<mvc:resources location="/" mapping="/index.jsp"/>
+	<mvc:resources location="/css/" mapping="/css/**"/>
+	<mvc:resources location="/js/" mapping="/js/**"/>
+	<mvc:resources location="/image/" mapping="/image/**"/>
+	<mvc:resources location="/fonts/" mapping="/fonts/**"/>
+	<mvc:resources location="/picture/" mapping="/picture/**"/>
+	<mvc:resources location="/dd-icon/" mapping="/dd-icon/**"/>
+	
+	<!--  配置mvc的拦截器 可以配置多个 -->
+	<mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/index.jsp"/>
+            <mvc:exclude-mapping path="/js/**"/>
+            <mvc:exclude-mapping path="/css/**"/>
+            <mvc:exclude-mapping path="/image/**"/>
+            <mvc:exclude-mapping path="/icon/**"/>
+            <mvc:exclude-mapping path="/fonts/**"/>
+            <mvc:exclude-mapping path="/picture/**"/>
+            <mvc:exclude-mapping path="/dd-icon/**"/>
+            <bean class="com.paipaiwang.interceptor.AuthenticateInterceptor"/>
+        </mvc:interceptor>
+        
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/index.jsp"/>
+            <mvc:exclude-mapping path="/js/**"/>
+            <mvc:exclude-mapping path="/css/**"/>
+            <mvc:exclude-mapping path="/image/**"/>
+            <mvc:exclude-mapping path="/icon/**"/>
+            <mvc:exclude-mapping path="/fonts/**"/>
+            <mvc:exclude-mapping path="/picture/**"/>
+            <mvc:exclude-mapping path="/dd-icon/**"/>
+            <bean class="com.paipaiwang.interceptor.AuthorizeInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    
+    <!-- 自定义的全局异常处理器 只要实现HandlerExceptionResolver接口就是全局异常处理器-->
+	<bean class="com.paipaiwang.exception.resolver.ExceptionResolver"></bean> 
+	
+	
+	<!-- 定义文件上传解析器(common-upload和common-io） -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设定默认编码 -->
+		<property name="defaultEncoding" value="UTF-8"></property>
+		<!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+		<property name="maxUploadSize" value="524288000"></property>
+	</bean>
+	
+	
+	
+</beans>
+

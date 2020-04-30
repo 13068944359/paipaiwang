@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+
+
+.personCenter .page_title{
+	margin-top:50px;
+	font-size: 18px;
+	color: #999;
+}
+
+
+.personCenter  .message_row{
+	margin-top: 15px;
+}
+
+.personCenter  .option_row{
+	/*text-align: center;*/
+	/*padding: 0px auto;*/
+
+}
+
+
+
+
+
+
+
+
+/*修改个人信息*/
+#edit_message_window .row{
+	margin-top: 20px;
+}
+#edit_message_window .row>div{
+	/*background: #eee;*/
+}
+
+#edit_message_window .center_window_key{
+	/*background: #aaa;*/
+	text-align: center;
+}
+
+
+#edit_message_window .center_window_key>p{
+	/*vertical-align: middle;*/
+	padding: 5px;
+	/*background: #eee;*/
+}
+
+
+
+/*修改密码*/
+#edit_password_window .row{
+	margin-top: 20px;
+}
+#edit_password_window .row>div{
+	/*background: #eee;*/
+}
+
+#edit_password_window .center_window_key{
+	/*background: #aaa;*/
+	text-align: center;
+}
+
+
+#edit_password_window .center_window_key>p{
+	/*vertical-align: middle;*/
+	padding: 5px;
+	/*background: #eee;*/
+}
+
+
+/*余额充值*/
+#charge_money_window .center_window_key>p{
+	padding: 5px;
+}
+
+
